@@ -1,7 +1,7 @@
-# Projet Azure DP-900 – Analyse de ventes
+# Projet Azure – Analyse de ventes
 
 ## Objectif
-Projet pratique pour la certification Microsoft Azure Data Fundamentals (DP‑900)
+Projet pratique pour les bases du Data
 
 ## Structure
 - `data/raw` : données brutes (CSV)
