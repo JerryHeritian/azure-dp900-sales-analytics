@@ -2,9 +2,9 @@
 -- Création de la table des ventes
 
 CREATE TABLE ventes (
-    transaction_id INT PRIMARY KEY,
+    transaction_id VARCHAR(10) PRIMARY KEY,
     date DATE NOT NULL,
-    customer_id INT,
+    customer_id VARCHAR(10) NOT NULL,
     gender VARCHAR(10),
     age INT,
     product_category VARCHAR(50),
