@@ -59,3 +59,28 @@ product_category VARCHAR(50),
 quantity INT,
 price_per_unit DECIMAL(10,2),
 total_amount DECIMAL(10,2)
+
+### Data Flow - Agrégation des ventes
+
+- **`Source`** : Lecture de la table `ventes` via `DS_Ventes_SQL_v2`
+- **`Select`** : Garde les colonnes `date`, `product_category`, `quantity`, `total_amount`
+- **`Derived Column`** : Crée `annee` = year(`date`) et `mois` = month(`date`)
+- **`Aggregate`** : Group by `annee`, `mois`, `product_category` avec :
+  - **`total_ventes`** = count()
+  - **`ca_total`** = sum(`total_amount`)
+  - **`prix_moyen`** = avg(`total_amount` / `quantity`)
+- **`Sink`** : Écriture dans la table `ventes_agregees` via `DS_Ventes_Aggregated`
+
+### Table de destination
+```sql
+CREATE TABLE ventes_agregees (
+    id INT IDENTITY(1,1) PRIMARY KEY,
+    annee INT NOT NULL,
+    mois INT NOT NULL,
+    product_category VARCHAR(50) NOT NULL,
+    total_ventes INT NOT NULL,
+    ca_total DECIMAL(12,2) NOT NULL,
+    prix_moyen DECIMAL(10,2) NOT NULL,
+    date_calcul DATE DEFAULT GETDATE()
+);
+
