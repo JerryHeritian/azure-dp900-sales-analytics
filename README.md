@@ -82,5 +82,8 @@ CREATE TABLE ventes_agregees (
     ca_total DECIMAL(12,2) NOT NULL,
     prix_moyen DECIMAL(10,2) NOT NULL,
     date_calcul DATE DEFAULT GETDATE()
-);
+); ```
 
+### Orchestration
+![Pipeline orchestration réussi](docs/pipeline_orchestration_success.png)
+*Exécution réussie du pipeline d'orchestration avec les deux activités enchaînées*
