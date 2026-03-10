@@ -115,6 +115,8 @@ pipeline-trigger-daily-1h.png
 
 query-result-pipeline.png
 
+synapse_serverless_query_result.png
+
 Concepts DP-900 couverts
 Données relationnelles : Azure SQL Database, tables, vues, IDENTITY, SEQUENCE
 
