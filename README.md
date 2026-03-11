@@ -84,46 +84,57 @@ CREATE TABLE ventes_agregees (
 Automatisation
 Trigger_Daily_1h : Exécution automatique du pipeline d'orchestration tous les jours à 1h00 (fuseau Eastern Time)
 
+## Azure Synapse - Requêtes serverless
+
+### Première requête : lecture du CSV dans Blob Storage
+```sql
+SELECT TOP 100 *
+FROM OPENROWSET(
+    BULK 'https://stdp900jerry.blob.core.windows.net/factures-pdf/Retail_Sales_clean.csv',
+    FORMAT = 'CSV',
+    PARSER_VERSION = '2.0'
+) AS [result]
+
+
+
 Captures d'écran
 Toutes les captures sont disponibles dans le dossier docs/ :
 
-blob-container-factures-pdf.png
+Azure Synapse Analytics
+synapse_serverless_query_result.png : Résultat de la première requête serverless – Lecture réussie du fichier CSV directement depuis Blob Storage sans import préalable.
 
-sas-token-generation(facture-001).png
+synapse_openrowset_syntax.png : Syntaxe correcte de OPENROWSET – Exemple de requête avec mapping de colonnes et gestion de l'en-tête.
 
-cosmos-arborescence.png
+synapse_external_view.png : Création d'une vue externe – Simplification des requêtes récurrentes sur les fichiers.
 
-cosmos-query-result.png
+Blob Storage
+blob-container-factures-pdf.png : Conteneur Blob avec les fichiers PDF – Stockage des factures non structurées.
 
-cosmos-query-stats.png
+sas-token-generation(facture-001).png : Génération d'un jeton SAS – Accès temporaire sécurisé à un fichier.
 
-linked-service.png
+Cosmos DB
+cosmos-arborescence.png : Arborescence Cosmos DB – Structure base → conteneur → items.
 
-linked-service-blob-config.png
+cosmos-query-result.png : Résultat d'une requête Cosmos DB – Exemple de documents JSON.
 
-linked-service-sql-config.png
+cosmos-query-stats.png : Statistiques de requête – Affichage des Request Units (RU) consommées.
 
-dataflow-aggregation-ventes.png
+Data Factory
+linked-service.png : Liste des linked services – Connexions à Blob Storage et Azure SQL.
 
-pipeline_orchestration_dependencies_success.png
+linked-service-blob-config.png : Configuration du linked service Blob – Paramètres de connexion.
 
-pipeline-monitor-run.png
+linked-service-sql-config.png : Configuration du linked service SQL – Authentification et base de données.
 
-ADF-Pipeline-trigger.png
+dataflow-aggregation-ventes.png : Data Flow d'agrégation – Transformations Select, Derived Column, Aggregate.
 
-pipeline-trigger-daily-1h.png
+Pipelines et orchestration
+pipeline_orchestration_dependencies_success.png : Pipeline d'orchestration réussi – Exécution avec dépendances entre activités.
 
-query-result-pipeline.png
+pipeline-monitor-run.png : Suivi d'exécution dans Monitor – Vue des pipelines en cours et terminés.
 
-synapse_serverless_query_result.png
+ADF-Pipeline-trigger.png : Configuration du trigger – Paramètres du déclencheur quotidien.
 
-Concepts DP-900 couverts
-Données relationnelles : Azure SQL Database, tables, vues, IDENTITY, SEQUENCE
+pipeline-trigger-daily-1h.png : Trigger quotidien actif – Planification à 1h00.
 
-Données non-relationnelles : Azure Blob Storage (SAS), Azure Cosmos DB (JSON)
-
-ETL & Intégration : Azure Data Factory (pipelines, data flows, triggers)
-
-Sécurité : Accès privé, SAS tokens, pare-feu SQL
-
-Bonnes pratiques : Séparation stockage/présentation, agrégation, automatisation
+query-result-pipeline.png : Résultat après exécution du pipeline – Vérification des données importées.
