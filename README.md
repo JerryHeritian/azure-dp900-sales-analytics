@@ -141,4 +141,6 @@ query-result-pipeline.png : Résultat après exécution du pipeline – Vérific
 
 synapse_external_view.png : Création d'une vue externe – Simplification des requêtes récurrentes sur les fichiers.
 
-`synapse_vue_ventes_par_categorie.png : **Analyse des ventes par catégorie via la vue** – Requête SQL exécutée sur la vue `v_ventes_brutes` montrant le nombre de ventes, les quantités totales et le chiffre d'affaires par catégorie de produit.
+synapse_vue_ventes_par_categorie.png : **Analyse des ventes par catégorie via la vue** – Requête SQL exécutée sur la vue `v_ventes_brutes` montrant le nombre de ventes, les quantités totales et le chiffre d'affaires par catégorie de produit.
+
+powerbi_dashboard_complet.png : **Tableau de bord complet** – Visualisations des ventes par catégorie, âge moyen des clients par catégorie, répartition des ventes par genre (Homme/Femme ~51%/49%) et segment de date pour le filtrage interactif.
