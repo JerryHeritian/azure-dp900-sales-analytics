@@ -138,3 +138,7 @@ ADF-Pipeline-trigger.png : Configuration du trigger – Paramètres du déclench
 pipeline-trigger-daily-1h.png : Trigger quotidien actif – Planification à 1h00.
 
 query-result-pipeline.png : Résultat après exécution du pipeline – Vérification des données importées.
+
+synapse_external_view.png : Création d'une vue externe – Simplification des requêtes récurrentes sur les fichiers.
+
+`synapse_vue_ventes_par_categorie.png : **Analyse des ventes par catégorie via la vue** – Requête SQL exécutée sur la vue `v_ventes_brutes` montrant le nombre de ventes, les quantités totales et le chiffre d'affaires par catégorie de produit.
