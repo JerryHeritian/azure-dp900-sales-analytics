@@ -152,3 +152,5 @@ powerbi_monthly_sales_final.png : **Ventes mensuelles** – Graphique en courbes
 powerbi_kpi_cards_final.png : **Indicateurs clés** – Cartes affichant les KPI principaux alignés en haut du dashboard.
 
 powerbi_slicers_final.png : **Filtres interactifs** – Segments pour filtrer par catégorie de produit et par genre.
+
+powerbi_rapport_complet.pdf : **Rapport Power BI complet** – Export PDF du tableau de bord avec toutes les visualisations (onglets "Analyse ventes" et "Analyse avancée").
