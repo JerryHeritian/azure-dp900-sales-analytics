@@ -144,3 +144,11 @@ synapse_external_view.png : Création d'une vue externe – Simplification des r
 synapse_vue_ventes_par_categorie.png : **Analyse des ventes par catégorie via la vue** – Requête SQL exécutée sur la vue `v_ventes_brutes` montrant le nombre de ventes, les quantités totales et le chiffre d'affaires par catégorie de produit.
 
 powerbi_dashboard_complet.png : **Tableau de bord complet** – Visualisations des ventes par catégorie, âge moyen des clients par catégorie, répartition des ventes par genre (Homme/Femme ~51%/49%) et segment de date pour le filtrage interactif.
+
+powerbi_onglet_avance_final.png : **Nouvel onglet "Analyse avancée"** – Vue d'ensemble avec cartes KPI (CA total, quantité totale, âge moyen), graphique des ventes mensuelles et slicers interactifs.
+
+powerbi_monthly_sales_final.png : **Ventes mensuelles** – Graphique en courbes montrant l'évolution du chiffre d'affaires mois par mois.
+
+powerbi_kpi_cards_final.png : **Indicateurs clés** – Cartes affichant les KPI principaux alignés en haut du dashboard.
+
+powerbi_slicers_final.png : **Filtres interactifs** – Segments pour filtrer par catégorie de produit et par genre.
