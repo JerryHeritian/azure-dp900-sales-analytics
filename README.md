@@ -11,7 +11,7 @@ Mise en place d'une plateforme de données de bout en bout (End-to-End) sur Azur
 - `powerbi/` : rapports Power BI (.pbix)
 
 ## Architecture technique
-![Architecture du projet](docs/architecture-azure-dp900.png)
+![Architecture du projet](docs/images/architecture-azure-dp900.png)
 
 ## Documentation détaillée
 - [Guide de reproduction](docs/reproduction.md) – Étapes pour recréer le projet
